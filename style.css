@@ -244,11 +244,7 @@ button .fas {
 
 /* Messages */
 #greeting {
-  font-weight: 500;
   font-size: 18px;
-  padding: 16px 20px;
-  border-radius: 8px;
-  color: #333;
   margin-bottom: 15px;
   display: none;
 }
