@@ -48,7 +48,10 @@
     <div class="attendance-tracker">
       <div class="attendance-header">
         <i class="fas fa-users"></i>
-        Attendance: <span id="attendeeCount">0</span>/50
+        Attendance: <span id="attendeeCount">0</span>/<span id="goalLabel">5</span>
+        <button type="button" id="resetBtn" title="Reset all counts">
+          <i class="fas fa-rotate-left"></i> Reset
+        </button>
       </div>
       <!-- Bootstrap progress bar: striped + animated until goal is reached -->
       <div
@@ -111,6 +114,12 @@
           </div>
         </div>
       </div>
+
+      <!-- Attendee list -->
+      <div class="attendee-section" id="attendeeSection" style="display:none">
+        <h3>Checked-In Attendees</h3>
+        <ul id="attendeeList"></ul>
+      </div>
     </div>
 
     <!-- Goal-reached modal -->
@@ -135,6 +144,7 @@
             <p class="text-muted mt-2">
               All 50 attendees have checked in. Outstanding turnout!
             </p>
+            <p id="winningTeamMsg" class="fw-semibold mt-1" style="color: #0071c5"></p>
             <button
               type="button"
               class="btn mt-3 px-4 py-2 fw-semibold text-white rounded-3"
