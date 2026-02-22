@@ -1,4 +1,4 @@
-const GOAL = 5;
+const GOAL = 50;
 
 let totalCount = 0;
 let attendees = []; // { name, team }
